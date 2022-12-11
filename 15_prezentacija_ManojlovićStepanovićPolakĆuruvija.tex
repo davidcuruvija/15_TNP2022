@@ -1,0 +1,163 @@
+\documentclass{beamer}
+\addtobeamertemplate{navigation symbols}{}{ \hspace{1em}    
+\usebeamerfont{footline}
+\usepackage[T2A]{fontenc}
+ \insertframenumber / \inserttotalframenumber }
+\usepackage[english,serbianc]{babel}
+\mode<presentation> {
+\usetheme{Berlin}
+\usepackage{textpos}
+\usepackage{hyperref}
+}
+\usepackage{graphicx} 
+\usepackage{booktabs} 
+\usepackage{pdfpages}
+\usepackage{grffile}
+\usepackage{amsmath} 
+\title[NFT и криптовалуте]{NFT и криптовалуте}
+\author{Вања Полак, Давид Ћурувија, Милан Манојловић, Страхиња Степановић}
+\institute[Математички факултет] 
+{
+\includegraphics[height=1cm,width=1cm]{hs-mittweida}
+\\[0.2in]
+\medskip
+Техничко и научно писање 
+}
+\begin{document}
+\begin{frame}
+\titlepage 
+\end{frame}
+
+\begin{frame}
+{\large\textbf{САДРЖАЈ}}
+\begin{itemize}
+	\item Увод
+	\item Историја NFT-a и криптовалута
+	\item Популарност NFT-a и криптовалута
+	\item Безбедност и трансакције NFT-a и криптовалута
+	\item Закључак
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+{\large\textbf{УВОД}}
+\begin{center}
+\textcolor[rgb]{0,0,0.55}{\colorbox[rgb]{0,0,1}{\textcolor[rgb]{1,1,1}{Шта је NFT, а шта криптовалута?}}}
+\end{center}
+\begin{itemize}
+   \item NFT (eng. non-fungible tokens) су незаменљиви токени који омогућавају да се разна уметничка дела на различитим медијима и сајтовима продају путем механизама дигиталне трговине.
+	 \item \(Blockchain\) је база података која се не налази на једном месту, већ је чине мање базе (блокови) које су међусобно дигитално повезане, а које садрже информације о дигиталним трансакцијама било које врсте.
+	 \item За разлику од криптовалута као што је нпр. \(Bitcoin\), NFT токени су уникатни и самим тим незаменљиви.
+	 \item Криптовалута је облик дигиталне имовине која се користи као средство размене користећи криптографију као начин обезбеђивања сигурности трансакција.
+\end{itemize} 
+\end{frame}
+
+\begin{frame}
+{\large\textbf{ИСТОРИЈА NFT-А И КРИПТОВАЛУТА}}
+\begin{center}
+\textcolor[rgb]{0,0,0.55}{\colorbox[rgb]{0,0,1}{\textcolor[rgb]{1,1,1}{Историја NFT-а}}}
+\end{center}
+\begin{itemize}
+\begin{itemize}
+	\item \(Quantum\), Кевин Мекој и Анид Даш, 2014. Приказан је на Слици \ref{fig:abc}.
+ \item \(Etheria\), демонстриран на конференцији DEVCON 1 у Лондону, октобар 2015.
+\end{itemize}
+\end{itemize} 
+\begin{figure}
+	\centering
+		\includegraphics[width=0.5\textwidth]{Quantum.jpeg}
+  \caption{Први NFT - Quantum}
+	\label{fig:abc}
+\end{figure}
+
+\end{frame}
+
+%--------------------7----------------------------
+\begin{frame}
+{\large\textbf{ИСТОРИЈА NFT-А И КРИПТОВАЛУТА}}
+\begin{center}
+\textcolor[rgb]{0,0,0.55}{\colorbox[rgb]{0,0,1}{\textcolor[rgb]{1,1,1}{Историја криптовалута}}}
+\end{center}
+\begin{itemize}
+\item 1983. - Дејвид Чаум - \(ecash\)
+\item Касније, 1995. године - \(Digicash\) \cite{abrar1900untraceable}
+\item 2009. - Сатоши Накамото - \(Bitcoin\) \cite{segendorf2014bitcoin}
+\item 2011. - \(Litecoin\) - веће програмирано ограничење и краће време стварања блок-ланца
+  \item 2012. - \(Ripple\), лакше се конвертује у односу на остале криптовалуте
+  \item 2015. - \(Ethereum\) - „паметни уговори“ који садрже механизме за повраћај новца ако једна страна прекрши споразум
+  \item Криптовалута са бизарном прошлошћу - \(Coinye\) - 2013.
+  \end{itemize}
+
+\end{frame}
+%---------------------8---------------------------
+\begin{frame}
+{\large\textbf{ИСТОРИЈА NFT-А И КРИПТОВАЛУТА}}
+\begin{center}
+\textcolor[rgb]{0,0,0.55}{\colorbox[rgb]{0,0,1}{\textcolor[rgb]{1,1,1}{Популарност NFT-a и криптовалута}}}
+\end{center}
+ \begin{itemize}
+     \item Тренд прављења NFT-ова почиње 2017. са блок-ланац игрицом "Crypto-Kitties".
+\item Највећи скок популарности дешава се у јануару 2021. године.
+\item Талас популарности из 2021. привлачи популарне личности (Снуп Дог, Стив Аоки, Џими Фелон), што још више доприноси популарности. \cite{ante2022non}
+ \end{itemize}
+\end{frame}
+
+
+%---------------------9---------------------------
+\begin{frame}
+{\large\textbf{БЕЗБЕДНОСТ NFT-А И КРИПТОВАЛУТА}}
+\begin{center}
+\textcolor[rgb]{0,0,0.55}{\colorbox[rgb]{0,0,1}{\textcolor[rgb]{1,1,1}{Шта је то приватни кључ и за шта се користи?}}}
+\end{center}
+  \begin{itemize}
+      \item NFT се
+заjедно са криптовалутама наjчешће складишти на нечему што се зове дигитални блок-ланац (eng. Digital Blockchain). 
+     \item  Када корисник купи NFT, он добиjа приватни кључ коjи може
+да складишти у дигиталном новчанику (све док таj новчаник подржава NFT).
+     \item Оваj приватни кључ jе неопходан за приступ и пренос NFT на друго место и треба га чувати у таjности у сваком тренутку.
+  \end{itemize}  
+\end{frame}
+%---------------------10---------------------------
+\begin{frame}
+{\large\textbf{БЕЗБЕДНОСТ NFT-А И КРИПТОВАЛУТА}}
+\begin{center}
+    \textcolor[rgb]{0,0,0.55}{\colorbox[rgb]{0,0,1}{\textcolor[rgb]{1,1,1}{Рањивост у NFT и криптоиндустрији}}}
+
+\end{center}
+    \begin{itemize}
+        \item Постоjе две кључне информациjе коjима ће саjбер криминалац покушати да приступи како би украо NFT или криптовалуте: приватни кључ и почетна фраза.
+        \item NFT/криптовалута се не може нигде преместити без коришћења приватног кључа, jер то кориснику омогућава да потврди да jе он извршио трансакциjу.
+         \item Наjвећи губитак у историjи биткоина десио се у фебруару 2014, када jе Мt. Gox \cite{rao2021mt}, тржиште биткоина у Токиjу, изгубило 850.000 BTC, што jе укупно износило 474 милиона долара у то време.
+
+    \end{itemize}
+\end{frame}
+%---------------------10---------------------------
+\begin{frame}
+{\large\textbf{БЕЗБЕДНОСТ NFT-А И КРИПТОВАЛУТА}}
+\begin{center}
+\textcolor[rgb]{0,0,0.55}{\colorbox[rgb]{0,0,1}{\textcolor[rgb]{1,1,1}{Како се одбранити од напада на NFT и криптотржишту}}}
+\end{center}
+ \begin{itemize}
+     \item Најважнији метод одбране је коришћење виртуелне приватне мреже (eng. VPN) ради шифровања и анонимизовања трансакција.
+\item Неопходно је добро се информисати и истражити о криптоиндустрији пре него што се уложи у NFT пројекат. Пожељно је проверити профил и историју оснивача пројекта пре улагања.
+\item Никада не треба делити своjу почетну фразу или податке за приjаву ни са ким или на било ком саjту.
+\item Трговина је пожељна само на познатим, провереним NFT тржиштима, уз коришћење сигурног дигиталног новчаника.
+\item Ради обезбеђивања додатне сигурности криптоновчаника, треба користити двофакторну аутентификацију.
+ \end{itemize}
+    
+\end{frame}
+%---------------------11---------------------------
+\begin{frame} 
+{\large\textbf{ЛИТЕРАТУРА}}
+\begin{center}
+\bibliographystyle{plain}
+\bibliography{refprez}
+\end{center}
+\end{frame} 
+
+\begin{frame}
+\begin{center}
+\textcolor[rgb]{0,0,0.55}{\colorbox[rgb]{0,0,1}{\textcolor[rgb]{1,1,1}{\Huge\textbf{Хвала на пажњи!}}}}
+\end{center}
+\end{frame}
+\end{document} 
